@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="BogdiEats.View.Module.PatmentEM"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BogdiEats.View.Module"
+             mc:Ignorable="d" 
+             d:DesignHeight="360" d:DesignWidth="330">
+    <Grid>
+        <Image HorizontalAlignment="Center" Margin="65,107,65,53" VerticalAlignment="Center" Width="200" Source="/BogdiEats;component/Image/vendor/debit-card.png" Opacity="0.7"/>
+        <TextBlock HorizontalAlignment="Center" Margin="34,22,34,0" VerticalAlignment="Top" FontSize="14" FontWeight="SemiBold" Width="262" Padding="0" Height="40" TextAlignment="Center"><Run Text="Close your card on this screen"/><LineBreak/><Run Text="to make payment"/></TextBlock>
+
+    </Grid>
+</UserControl>

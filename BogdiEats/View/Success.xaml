@@ -1,0 +1,16 @@
+﻿<Page x:Class="BogdiEats.View.Success"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BogdiEats.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="Success" Loaded="Page_Loaded">
+
+    <Grid MouseDown="Rectangle_MouseDown">
+        <Image HorizontalAlignment="Center" Height="298" Margin="0,-100,0,0" VerticalAlignment="Center" Width="160" Source="/BogdiEats;component/Image/asset/check.png"/>
+        <Label Content="Order Successful!" HorizontalAlignment="Center" Margin="284,344,284,214" VerticalAlignment="Center" FontSize="24" FontWeight="SemiBold" HorizontalContentAlignment="Center"/>
+        <Label Content="Thank you for using the BogdiEats application!" HorizontalAlignment="Center" Margin="229,390,229,180" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" HorizontalContentAlignment="Center" Width="342" Foreground="#FF555555"/>
+    </Grid>
+</Page>

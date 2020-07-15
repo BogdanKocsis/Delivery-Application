@@ -1,0 +1,49 @@
+﻿<Page x:Class="BogdiEats.View.Detail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BogdiEats.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="330" d:DesignWidth="540"
+      Title="Detail"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  
+>
+
+    <Grid>
+        <Label x:Name="id" Visibility="Hidden"/>
+        <Image x:Name="imageMenu" HorizontalAlignment="Left" Height="221" Margin="10,10,0,0" VerticalAlignment="Top" Width="280" Source="/BogdiEats;component/Image/thumbnail.png"/>
+        <Label x:Name="lblName" Content="Product/Item" HorizontalAlignment="Left" Margin="312,10,0,0" VerticalAlignment="Top" Height="37" Width="214" FontSize="24" FontFamily="Segoe UI Bold" Padding="0"/>
+        <Label Content="Category:" HorizontalAlignment="Left" Margin="312,60,0,0" VerticalAlignment="Top" Width="57" Padding="0" FontSize="14"/>
+        <Label x:Name="lblAllergens" Content="Allergens: " HorizontalAlignment="Left" Margin="312,80,0,0" VerticalAlignment="Top" Width="212" Padding="0" FontSize="14"/>
+        <TextBlock x:Name="lblDescription" HorizontalAlignment="Left" Margin="11,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="280" TextAlignment="Justify" FontSize="14" Foreground="#FF555555"><Run Text="Description"/><Run Text="."/></TextBlock>
+        <Label x:Name="lblCategory" Content="Category" HorizontalAlignment="Left" Margin="376,60,0,0" VerticalAlignment="Top" Width="150" Padding="0" FontSize="14"/>
+        <StackPanel x:Name="spDetail" HorizontalAlignment="Left" Height="216" Margin="314,104,0,0" VerticalAlignment="Top" Width="212">
+            
+            <Border VerticalAlignment="Center" Margin="0,20,0,10" Background="#FFDEDEDE" CornerRadius="4">
+                <Grid>
+                    <Button x:Name="btnMinus" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Top" Width="36" Height="37" FontSize="18" FontWeight="Bold" Click="BtnMinus_Click" Padding="0">
+                        <materialDesign:PackIcon Kind="MinusCircle"></materialDesign:PackIcon>
+                    </Button>
+                    <Label  Content="1" Margin="56,10" FontSize="16" HorizontalContentAlignment="Center" Background="{x:Null}" FontWeight="SemiBold" x:Name="lblQty" Width="100" Padding="4,6,4,0"/>
+                    <Button x:Name="btnPlus" HorizontalAlignment="Right" Margin="0,10,10,10" VerticalAlignment="Top" Width="36" Height="37" FontSize="18" FontWeight="Bold" Click="BtnPlus_Click" Padding="0">
+                        <materialDesign:PackIcon Kind="PlusCircle"></materialDesign:PackIcon>
+                    </Button>
+                </Grid>
+            </Border>
+            <TextBlock x:Name="Disponibility" Foreground="Red" HorizontalAlignment="Right"></TextBlock>
+            <Button x:Name="btnAdd" Background="#FFFFCD1D" BorderBrush="{x:Null}" Padding="10" VerticalAlignment="Top" HorizontalAlignment="Right" Width="212" Margin="0,10,0,0" Click="BtnAdd_Click" Cursor="Hand" Height="64">
+                <DockPanel LastChildFill="False" Width="184">
+                    <StackPanel Width="140">
+                        <Label DockPanel.Dock="Left" Content="ADD" Width="116" FontFamily="Segoe UI Bold" Foreground="White" Padding="0" HorizontalAlignment="Left" FontSize="14"/>
+                        <Label x:Name="lblSubtotal" DockPanel.Dock="Left" Content="2 Item (Lei 20)" Foreground="White" Padding="0" FontSize="14"/>
+                    </StackPanel>
+                    <Image DockPanel.Dock="Right" Source="/BogdiEats;component/Image/cart-icon.png" Width="27" Height="27" />
+                </DockPanel>
+            </Button>
+
+        </StackPanel>
+        <Label x:Name="lblQuantity" Content="Quantity: " HorizontalAlignment="Left" Margin="312,40,0,0" VerticalAlignment="Top" Width="212" Padding="0" FontSize="14"/>
+
+    </Grid>
+</Page>

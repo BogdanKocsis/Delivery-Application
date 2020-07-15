@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACA0F711-1978-4198-8CDC-B350476E067D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BogdiEats</RootNamespace>
+    <AssemblyName>BogdiEats</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Category %287%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=1.2.2.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.1.2.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.0.1.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.3.0.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.7.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Permissions.4.7.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Controller\CartController.cs" />
+    <Compile Include="Controller\ConnectionController.cs" />
+    <Compile Include="Controller\DetailController.cs" />
+    <Compile Include="Controller\HomeController.cs" />
+    <Compile Include="Controller\PayController.cs" />
+    <Compile Include="Exception\UserException.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Model\BasePropertyChanded.cs" />
+    <Compile Include="Model\BusinessLogicLayer\UserBLL.cs" />
+    <Compile Include="Model\Connection.cs" />
+    <Compile Include="Model\ItemTransactionModel.cs" />
+    <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\MenuModel.cs" />
+    <Compile Include="Model\TransactionModel.cs" />
+    <Compile Include="Model\EntityLayer\User.cs" />
+    <Compile Include="Model\DataAccessLayer\UserDAL.cs" />
+    <Compile Include="ViewModels\Commands\RelayCommand.cs" />
+    <Compile Include="ViewModels\UserVM.cs" />
+    <Compile Include="View\AdminHistory.xaml.cs">
+      <DependentUpon>AdminHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditDatabase.xaml.cs">
+      <DependentUpon>EditDatabase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\History.xaml.cs">
+      <DependentUpon>History.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Module\ItemCart.xaml.cs">
+      <DependentUpon>ItemCart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Module\ItemCategory.xaml.cs">
+      <DependentUpon>ItemCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Module\ItemMenu.xaml.cs">
+      <DependentUpon>ItemMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Module\LogIn.xaml.cs">
+      <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Module\PaymentEM.xaml.cs">
+      <DependentUpon>PaymentEM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Module\PaymentCash.xaml.cs">
+      <DependentUpon>PaymentCash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Module\PaymentGopay.xaml.cs">
+      <DependentUpon>PaymentGopay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pay.xaml.cs">
+      <DependentUpon>Pay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail.xaml.cs">
+      <DependentUpon>Detail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cart.xaml.cs">
+      <DependentUpon>Cart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Stock.xaml.cs">
+      <DependentUpon>Stock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Success.xaml.cs">
+      <DependentUpon>Success.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\AdminHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditDatabase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\History.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\Module\ItemCart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Module\ItemCategory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Module\ItemMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Module\LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Module\PaymentEM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Module\PaymentCash.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Module\PaymentGopay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Cart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Stock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\category\category %281%29.png" />
+    <Resource Include="Image\category\category %282%29.png" />
+    <Resource Include="Image\category\category %284%29.png" />
+    <Resource Include="Image\category\category %283%29.png" />
+    <Resource Include="Image\category\category %285%29.png" />
+    <Resource Include="Image\category\category %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\asset\left-arrow 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\asset\close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\vendor\logo-gopay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\vendor\ovo-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\vendor\e-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\vendor\qr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\vendor\ovo-qr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\vendor\debit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\vendor\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\asset\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\menu\bakmi jawa.png" />
+    <Resource Include="Image\menu\indomie goreng.png" />
+    <Resource Include="Image\menu\indomie rebus.png" />
+    <Resource Include="Image\menu\mie ayam bakso.png" />
+    <Resource Include="Image\menu\mie ayam ceker.png" />
+    <Resource Include="Image\menu\mie ayam.png" />
+    <Resource Include="Image\menu\mie dok dok.png" />
+    <Resource Include="Image\menu\mie nyemek.png" />
+    <Resource Include="Image\menu\mie seafood.png" />
+    <Resource Include="Image\menu\samyang.png" />
+    <Resource Include="Image\menu\es dawet.png" />
+    <Resource Include="Image\menu\es jeruk.png" />
+    <Resource Include="Image\menu\es kelapa muda.png" />
+    <Resource Include="Image\menu\es teh.png" />
+    <Resource Include="Image\menu\jahe.png" />
+    <Resource Include="Image\menu\lemon tea.png" />
+    <Resource Include="Image\menu\milkshake.png" />
+    <Resource Include="Image\menu\soda gembira.png" />
+    <Resource Include="Image\menu\sup buah.png" />
+    <Resource Include="Image\menu\daun pepaya.png" />
+    <Resource Include="Image\menu\daun singkong.png" />
+    <Resource Include="Image\menu\kangkung.png" />
+    <Resource Include="Image\menu\sayur asem.png" />
+    <Resource Include="Image\menu\sayur bayam.png" />
+    <Resource Include="Image\menu\sayur lodeh.png" />
+    <Resource Include="Image\menu\sayur sawi.png" />
+    <Resource Include="Image\menu\terong tempe.png" />
+    <Resource Include="Image\menu\tumis terong.png" />
+    <Resource Include="Image\menu\tumis toge.png" />
+    <Resource Include="Image\menu\bakso goreng.png" />
+    <Resource Include="Image\menu\batagor.png" />
+    <Resource Include="Image\menu\gethuk.png" />
+    <Resource Include="Image\menu\kentang goreng.png" />
+    <Resource Include="Image\menu\pisang goreng.png" />
+    <Resource Include="Image\menu\siomay.png" />
+    <Resource Include="Image\menu\tahu bakso.png" />
+    <Resource Include="Image\menu\tempe goreng.png" />
+    <Resource Include="Image\menu\ubi.png" />
+    <Resource Include="Image\menu\bihun kuah.png" />
+    <Resource Include="Image\menu\soto.png" />
+    <Resource Include="Image\menu\sup ayam.png" />
+    <Resource Include="Image\menu\sup iga.png" />
+    <Resource Include="Image\menu\sup ikan.png" />
+    <Resource Include="Image\menu\sup jagung.png" />
+    <Resource Include="Image\menu\sup jamur.png" />
+    <Resource Include="Image\menu\sup kacang merah.png" />
+    <Resource Include="Image\menu\sup zuppa.png" />
+    <Resource Include="Image\menu\tomyam.png" />
+    <Resource Include="Image\menu\kopi.png" />
+    <Resource Include="Image\menu\kebul.png" />
+    <Resource Include="Image\menu\nasigorengmerah.png" />
+    <Resource Include="Image\menu\sego kuning.png" />
+    <Resource Include="Image\menu\segobakar.png" />
+    <Resource Include="Image\menu\segobalap.png" />
+    <Resource Include="Image\menu\segogoreng.png" />
+    <Resource Include="Image\menu\segogudeg.png" />
+    <Resource Include="Image\menu\segoliwet.png" />
+    <Resource Include="Image\menu\segorames.png" />
+    <Resource Include="Image\menu\segouduk.png" />
+    <Resource Include="Image\asset\cherry-list-is-empty-1.png" />
+    <Resource Include="Image\asset\giphy.gif" />
+    <Resource Include="Category %287%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\menu\img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\amieats-logo.png" />
+    <Resource Include="Image\cart-icon.png" />
+    <Resource Include="Image\logo-amieats-big.png" />
+    <Resource Include="Image\thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\category\category %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\menu\test.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>
